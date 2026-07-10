@@ -4,87 +4,404 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mohamed Ali - Professional Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+  <title>Mohamed Ali — Front-End Developer &amp; Web Designer</title>
+  <meta name="description" content="Mohamed Ali — Front-End Developer &amp; Web Designer with 5+ years building responsive websites, e-commerce platforms and WordPress sites.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
+
   <header class="page__header">
-    <nav class="navbar__menu">
-      <ul id="navbar__list"></ul>
-    </nav>
+    <div class="navbar">
+      <a href="#hero" class="navbar__brand"><span class="dot">●</span> mohamed-ali<span style="color:var(--text-faint)">.dev</span></a>
+      <nav class="navbar__menu">
+        <ul id="navbar__list"></ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </header>
+
   <main>
-    <header class="main__hero">
-      <h1>Mohamed Ali</h1>
-    </header>
 
-    <section id="section1" data-nav="About Me" class="your-active-class">
-      <div class="landing__container">
-        <h2>About Me</h2>
-        <p>Experienced Front End Developer and expert Web Designer with over 5 years of industry experience. Proficient in developing and branding attractive, responsive websites using core Front-End technologies including HTML, CSS, JavaScript, jQuery, and Bootstrap, Vue.js, and React.js.</p>
-        <p>Experienced with WordPress for CMS development and utilizing frameworks like CodeIgniter and modern UI frameworks like Metronic to build scalable web applications. A collaborative and dedicated professional with a strong work ethic, consistently striving to build positive working relationships and contribute to project success.</p>
-        <p><strong>Education:</strong> Bachelor of Computer Science, Tanta University, Faculty of Science (2008).</p>
-        <p><strong>Languages:</strong> Arabic (Native), English (Professional Working Proficiency).</p>
+    <!-- ============ HERO ============ -->
+    <section id="hero" data-nav="Home">
+      <div class="wrap hero">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__kicker">// front-end developer &amp; web designer</span>
+            <h1>Mohamed Ali</h1>
+            <p class="hero__role">Building <span style="color:var(--accent-teal)">responsive</span>, brand-accurate websites since 2018.</p>
+            <p class="hero__lede">Five-plus years turning designs into fast, pixel-accurate interfaces — from enterprise e-invoicing platforms to WordPress sites for real estate, fashion, media and healthcare clients across Egypt and the Gulf.</p>
+            <div class="hero__ctas">
+              <a class="btn btn--primary" href="mailto:m.aliconsult2@gmail.com">Send an email</a>
+              <a class="btn btn--ghost" href="https://wa.me/201006031817" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              <a class="btn btn--ghost" href="#portfolio">View the work</a>
+            </div>
+          </div>
+
+          <div class="hero__panel">
+            <div class="browser">
+              <div class="browser__bar">
+                <div class="browser__dots"><span></span><span></span><span></span></div>
+                <div class="browser__address">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                  <span>developer.json</span>
+                </div>
+              </div>
+              <div class="browser__body">
+                <span class="code-line"><span class="code-punc">{</span></span>
+                <span class="code-line">&nbsp;&nbsp;<span class="code-key">"name"</span><span class="code-punc">:</span> <span class="code-str">"Mohamed Ali"</span><span class="code-punc">,</span></span>
+                <span class="code-line">&nbsp;&nbsp;<span class="code-key">"role"</span><span class="code-punc">:</span> <span class="code-str">"Front-End Developer"</span><span class="code-punc">,</span></span>
+                <span class="code-line">&nbsp;&nbsp;<span class="code-key">"experience"</span><span class="code-punc">:</span> <span class="code-str">"5+ years"</span><span class="code-punc">,</span></span>
+                <span class="code-line">&nbsp;&nbsp;<span class="code-key">"stack"</span><span class="code-punc">:</span> <span class="code-punc">[</span></span>
+                <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"HTML5"</span><span class="code-punc">,</span> <span class="code-str">"CSS3"</span><span class="code-punc">,</span> <span class="code-str">"JS"</span><span class="code-punc">,</span></span>
+                <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"jQuery"</span><span class="code-punc">,</span> <span class="code-str">"Bootstrap"</span><span class="code-punc">,</span></span>
+                <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"Vue.js"</span><span class="code-punc">,</span> <span class="code-str">"WordPress"</span></span>
+                <span class="code-line">&nbsp;&nbsp;<span class="code-punc">]</span><span class="code-punc">,</span></span>
+                <span class="code-line">&nbsp;&nbsp;<span class="code-key">"location"</span><span class="code-punc">:</span> <span class="code-str">"Cairo, Egypt"</span> <span class="code-com">// open to remote</span></span>
+                <span class="code-line"><span class="code-punc">}</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="section2" data-nav="Experience">
-      <div class="landing__container">
-        <h2>Professional Experience</h2>
-        <h3>Front End Developer | Hypertech Company, Cairo, Nasr City (March 2018 – July 2024)</h3>
-        <ul>
-          <li>Led the full lifecycle development and design of responsive, user-centric websites and e-commerce platforms.</li>
-          <li>Designed and implemented dynamic web assets including high-converting landing pages, interactive banners, and engaging email templates.</li>
-          <li>Played a pivotal role in the front-end development and UI/UX design of "Anavex," a cloud-based electronic invoicing program for Efhas Information Technology Company.</li>
-          <li>Produced high-fidelity mockups, wireframes, and interactive prototypes for new web features and page updates.</li>
-          <li>Developed and optimized display banner advertisements and various digital promotional materials.</li>
-          <li>Continuously researched and integrated emerging Front-End technologies to enhance development efficiency.</li>
-        </ul>
+    <!-- ============ ABOUT ============ -->
+    <section id="about" data-nav="About">
+      <div class="wrap about">
+        <span class="eyebrow">01 · About</span>
+        <div class="about__grid">
+          <div>
+            <h2 style="margin-bottom:1.1rem;">A front-end developer who thinks in components and speaks fluent client-brief.</h2>
+            <p>I design and build attractive, responsive websites with HTML, CSS, JavaScript, jQuery, Bootstrap, Vue.js and React — then ship them on WordPress, CodeIgniter or the Metronic UI framework depending on what the project actually needs.</p>
+            <p>Most of my work sits at the intersection of design and delivery: turning a Photoshop mockup or a business requirement into an interface that performs well, reads clearly, and holds up across devices. I'm comfortable owning a build end to end, from wireframe to deployed page.</p>
+          </div>
+          <div>
+            <div class="stat-card"><span class="num">5+</span><span class="label">years in front-end<br>&amp; web design</span></div>
+            <div class="stat-card"><span class="num">14+</span><span class="label">live WordPress<br>projects shipped</span></div>
+            <div class="stat-card"><span class="num">2</span><span class="label">full platforms built<br>for Efhas POS</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="section3" data-nav="Projects">
-      <div class="landing__container">
-        <h2>Key Projects</h2>
-        <h3>Efhas POS - Cloud-Based E-Invoicing System</h3>
-        <p>Spearheaded entire Front-End development for a comprehensive cloud-based electronic invoicing system (Simple & Professional versions). Focused on intuitive, responsive UI/UX using CodeIgniter and Metronic UI Framework.</p>
-        
-        <h3>Selected Portfolio</h3>
-        <ul>
-          <li><strong>Cyclops AG:</strong> Holding Company for Global Trade & Construction.</li>
-          <li><strong>National Co. For Metal Forming:</strong> Manufacturer of high-precision metal components.</li>
-          <li><strong>Growthlabs:</strong> SaaS Platform for Accelerator and Incubator Management.</li>
-          <li><strong>Healiot:</strong> IT Consulting Services Platform.</li>
-          <li><strong>Sequence:</strong> E-commerce Retailer (Abayas and Modest Fashion).</li>
-          <li><strong>Copper Invest:</strong> Egyptian General Contracting and Real Estate.</li>
-          <li><strong>Efhas POS:</strong> Saudi Cloud POS and E-invoicing SaaS.</li>
-          <li><strong>HeshamGharieb:</strong> Digital Dental Surgery Portfolio.</li>
-          <li><strong>Jasaah:</strong> Saudi General Contracting & MEP.</li>
-          <li><strong>Wq3ly:</strong> Digital Document E-signature Platform.</li>
-          <li><strong>Fursan Holidays:</strong> Full-Service Travel and Tourism Agency.</li>
-          <li><strong>Eya of Sudan:</strong> Sudanese Digital Media and News Platform.</li>
-          <li><strong>Almalef Alarabi:</strong> Arabic Publishing & Distribution House.</li>
-          <li><strong>Alloffplan.ae:</strong> UAE Off-Plan Real Estate Brokerage.</li>
-        </ul>
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" data-nav="Skills">
+      <div class="wrap">
+        <span class="eyebrow">02 · Skills</span>
+        <div class="section__head"><h2>What I build with</h2></div>
+        <div class="skills__groups">
+          <div class="skill-group">
+            <h3>Front-End</h3>
+            <div class="chip-row">
+              <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
+              <span class="chip">jQuery</span><span class="chip">Bootstrap</span><span class="chip">Vue.js</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Platforms &amp; Frameworks</h3>
+            <div class="chip-row">
+              <span class="chip">WordPress</span><span class="chip">CodeIgniter</span><span class="chip">Metronic</span><span class="chip">Laravel (integration)</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <div class="chip-row">
+              <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">Photoshop</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Working style</h3>
+            <div class="chip-row">
+              <span class="chip">Problem solving</span><span class="chip">Teamwork</span><span class="chip">Communication</span><span class="chip">Time management</span><span class="chip">Adaptability</span>
+            </div>
+          </div>
+          <div class="skill-group" style="grid-column: span 2;">
+            <h3>Languages</h3>
+            <div class="lang-row">
+              <div>
+                <span style="font-family:var(--font-mono); font-size:0.85rem;">Arabic — Native</span>
+                <div class="lang-bar"><span style="width:100%;"></span></div>
+              </div>
+              <div>
+                <span style="font-family:var(--font-mono); font-size:0.85rem;">English — Professional working proficiency</span>
+                <div class="lang-bar"><span style="width:80%;"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="section4" data-nav="Skills & Contact">
-      <div class="landing__container">
-        <h2>Skills & Contact</h2>
-        <p><strong>Skills:</strong> HTML5, CSS3, JavaScript, jQuery, Bootstrap, Vue.js, WordPress, Git/GitHub, VS Code, Photoshop, CodeIgniter, Metronic, Problem Solving, Teamwork, Communication, Time Management.</p>
-        <p><strong>Mobile:</strong> +2 (012) 893-065-64 | <strong>WhatsApp:</strong> +2 (010) 060-318-17</p>
-        <p><strong>Email:</strong> m.aliconsult2@gmail.com</p>
-        <p><strong>Udacity Certificate ID:</strong> 7RMCX3HM</p>
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" data-nav="Experience">
+      <div class="wrap">
+        <span class="eyebrow">03 · Experience</span>
+        <div class="section__head"><h2>Where I've worked</h2></div>
+        <div class="timeline">
+          <div class="timeline__node">
+            <div class="timeline__meta">
+              <div>
+                <h3>Front-End Developer</h3>
+                <span class="company">Hypertech Company · Cairo, Nasr City</span>
+              </div>
+              <span class="dates">March 2018 — July 2024</span>
+            </div>
+            <ul>
+              <li>Led full-lifecycle development and design of responsive, user-centric websites and e-commerce platforms, combining custom code and WordPress to keep performance high and the experience intuitive.</li>
+              <li>Designed and built dynamic web assets — landing pages, interactive banners and email templates — to strengthen brand presence and lift conversion rates.</li>
+              <li>Played a pivotal role in the front-end development and UI/UX of <strong style="color:var(--text-primary)">Anavex</strong>, a cloud-based electronic invoicing program for Efhas Information Technology Company.</li>
+              <li>Produced high-fidelity mockups, wireframes and interactive prototypes for new features, working closely with marketing and design teams to hit business goals.</li>
+              <li>Developed and optimized display banners and digital promotional material for visual appeal and technical compliance across partner platforms.</li>
+              <li>Continuously researched emerging front-end techniques to improve build efficiency and site performance.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- ============ FEATURED PROJECT ============ -->
+    <section id="projects" data-nav="Projects">
+      <div class="wrap">
+        <span class="eyebrow">04 · Featured project</span>
+        <div class="section__head"><h2>Efhas POS — Cloud-Based E-Invoicing System</h2></div>
+        <div class="featured__intro">
+          <p>Spearheaded the entire front-end for Efhas POS across two distinct products — a <strong style="color:var(--text-primary)">Simple</strong> platform for small businesses and a <strong style="color:var(--text-primary)">Professional</strong> platform for large-scale enterprise operations — designing the full UI/UX and visual system from the ground up and translating complex business requirements into interfaces that stay consistent across every module.</p>
+          <div class="tag-row">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">jQuery</span>
+            <span class="tag">Bootstrap</span><span class="tag">CodeIgniter</span><span class="tag">Metronic + Laravel</span><span class="tag">AJAX</span><span class="tag">Git</span>
+          </div>
+        </div>
+
+        <div class="featured">
+          <div class="browser">
+            <div class="browser__bar">
+              <div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                <span>efhaspos.com/pos/platform/login</span>
+              </div>
+            </div>
+            <div class="browser__screen">
+              <div class="glyph g1">S</div>
+              <div class="title">Efhas POS — Simple</div>
+              <div class="desc">Metronic UI on Laravel, built for small businesses that need to be invoicing in minutes.</div>
+            </div>
+            <div class="browser__footer">
+              <span class="tag" style="border:none; padding:0;">Small business</span>
+              <a href="https://efhaspos.com/pos/platform/login" target="_blank" rel="noopener">Open demo ↗</a>
+            </div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar">
+              <div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                <span>efhaspos.com/platform2/admin/login</span>
+              </div>
+            </div>
+            <div class="browser__screen">
+              <div class="glyph g2">P</div>
+              <div class="title">Efhas POS — Professional</div>
+              <div class="desc">Built end-to-end on CodeIgniter for enterprise-scale invoicing operations.</div>
+            </div>
+            <div class="browser__footer">
+              <span class="tag" style="border:none; padding:0;">Enterprise</span>
+              <a href="https://efhaspos.com/platform2/admin/login" target="_blank" rel="noopener">Open demo ↗</a>
+            </div>
+          </div>
+        </div>
+        <p style="text-align:center;"><a href="https://efhaspos.com" target="_blank" rel="noopener" style="font-family:var(--font-mono); font-size:0.85rem; color:var(--accent-teal); text-decoration:none;">→ efhaspos.com</a></p>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO GRID ============ -->
+    <section id="portfolio" data-nav="Portfolio">
+      <div class="wrap">
+        <span class="eyebrow">05 · WordPress portfolio</span>
+        <div class="section__head">
+          <h2>Sites shipped for real clients</h2>
+          <span class="section__index">13 live builds</span>
+        </div>
+
+        <div class="portfolio__grid">
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>cyclops-ag.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g4">C</div><div class="title">Cyclops AG</div>
+              <div class="desc">Holding company across global trade, construction &amp; investment.</div></div>
+            <div class="browser__footer"><span></span><a href="https://cyclops-ag.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>national-fi.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g3">N</div><div class="title">National Co. for Metal Forming</div>
+              <div class="desc">Precision metal hinges for major home-appliance manufacturers.</div></div>
+            <div class="browser__footer"><span></span><a href="https://national-fi.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>new.growthlabs.app</span></div></div>
+            <div class="browser__screen"><div class="glyph g5">G</div><div class="title">Growthlabs</div>
+              <div class="desc">All-in-one SaaS for accelerator &amp; incubator management.</div></div>
+            <div class="browser__footer"><span></span><a href="https://new.growthlabs.app/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>beta.healiot.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g6">H</div><div class="title">Healiot</div>
+              <div class="desc">IT consulting services platform.</div></div>
+            <div class="browser__footer"><span></span><a href="https://beta.healiot.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>sequenceae.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g2">S</div><div class="title">Sequence AE</div>
+              <div class="desc">E-commerce retailer for abayas &amp; modest fashion.</div></div>
+            <div class="browser__footer"><span></span><a href="https://sequenceae.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>copper-invest.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g1">C</div><div class="title">Copper Invest</div>
+              <div class="desc">Egyptian general contracting &amp; real estate investment.</div></div>
+            <div class="browser__footer"><span></span><a href="https://copper-invest.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>heshamgharieb.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g4">H</div><div class="title">Hesham Gharieb</div>
+              <div class="desc">Digital portfolio for a dental surgery practice.</div></div>
+            <div class="browser__footer"><span></span><a href="https://heshamgharieb.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>jasaah.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g5">J</div><div class="title">Jasaah</div>
+              <div class="desc">Saudi general contracting &amp; MEP services.</div></div>
+            <div class="browser__footer"><span></span><a href="https://jasaah.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>wq3ly.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g6">W</div><div class="title">Wq3ly</div>
+              <div class="desc">Digital document e-signature platform.</div></div>
+            <div class="browser__footer"><span></span><a href="https://wq3ly.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>fursanholidays.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g3">F</div><div class="title">Fursan Holidays</div>
+              <div class="desc">Full-service travel &amp; tourism agency in Saudi Arabia.</div></div>
+            <div class="browser__footer"><span></span><a href="https://www.fursanholidays.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>eyaofsudan.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g2">E</div><div class="title">Eya of Sudan</div>
+              <div class="desc">Sudanese digital media &amp; news platform.</div></div>
+            <div class="browser__footer"><span></span><a href="https://eyaofsudan.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>almalefalarabi.com</span></div></div>
+            <div class="browser__screen"><div class="glyph g1">A</div><div class="title">Al Malef Al Arabi</div>
+              <div class="desc">Arabic publishing &amp; distribution house.</div></div>
+            <div class="browser__footer"><span></span><a href="https://almalefalarabi.com/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+          <div class="browser">
+            <div class="browser__bar"><div class="browser__dots"><span></span><span></span><span></span></div>
+              <div class="browser__address"><span>alloffplan.ae</span></div></div>
+            <div class="browser__screen"><div class="glyph g5">A</div><div class="title">All Off Plan</div>
+              <div class="desc">UAE off-plan real estate brokerage.</div></div>
+            <div class="browser__footer"><span></span><a href="https://alloffplan.ae/" target="_blank" rel="noopener">Visit ↗</a></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" data-nav="Education">
+      <div class="wrap">
+        <span class="eyebrow">06 · Education &amp; certification</span>
+        <div class="section__head"><h2>Background</h2></div>
+        <div class="edu__grid">
+          <div class="card">
+            <h3>Computer Science &amp; Programming</h3>
+            <div class="meta">Tanta University — Faculty of Science, Public Service Center · Tanta, Egypt · 2008</div>
+            <p style="margin:0;">4-year training program covering the fundamentals of computer science and programming.</p>
+          </div>
+          <div class="card">
+            <h3>Professional Front-End Web Development</h3>
+            <div class="meta">Udacity Nanodegree · Sponsored by the Egyptian Ministry of Communications and Information Technology · Completed March 9, 2022</div>
+            <p style="margin:0;">Verified certificate of completion for the Front-End Web Development nanodegree program.</p>
+            <span class="cert-id">Certificate ID · 7RMCX3HM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" data-nav="Contact">
+      <div class="wrap contact">
+        <span class="eyebrow">07 · Contact</span>
+        <div class="section__head"><h2>Let's build something</h2></div>
+
+        <div class="browser" style="max-width:640px;">
+          <div class="browser__bar">
+            <div class="browser__dots"><span></span><span></span><span></span></div>
+            <div class="browser__address"><span>~/contact</span></div>
+          </div>
+          <div class="browser__body terminal">
+            <div class="line"><span class="prompt">$</span> contact <span class="flag">--email</span> <span class="val"><a href="mailto:m.aliconsult2@gmail.com">m.aliconsult2@gmail.com</a></span></div>
+            <div class="line"><span class="prompt">$</span> contact <span class="flag">--mobile</span> <span class="val"><a href="tel:+201289306564">+2 (012) 893-065-64</a></span></div>
+            <div class="line"><span class="prompt">$</span> contact <span class="flag">--whatsapp</span> <span class="val"><a href="https://wa.me/201006031817" target="_blank" rel="noopener">+2 (010) 060-318-17</a></span></div>
+            <div class="line"><span class="prompt">$</span> contact <span class="flag">--location</span> <span class="val">Cairo, Egypt</span></div>
+          </div>
+        </div>
+
+        <div class="contact__ctas">
+          <a class="btn btn--primary" href="mailto:m.aliconsult2@gmail.com">Send an email</a>
+          <a class="btn btn--ghost" href="https://wa.me/201006031817" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
   </main>
-  
+
   <footer class="page__footer">
-    <p>&copy; Mohamed Ali</p>
-    <button onclick="topFunction()" id="to-top" title="Go to top">Top</button>
+    <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; gap:1rem;">
+      <span>© 2026 Mohamed Ali. Built line by line.</span>
+      <span>Cairo, Egypt</span>
+    </div>
   </footer>
+
+  <button id="to-top" title="Back to top" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
   <script src="js/app.js"></script>
 </body>
 </html>
