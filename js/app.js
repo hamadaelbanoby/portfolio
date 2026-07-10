@@ -1,109 +1,75 @@
 /**
- * Define Global Variables
- * 
-*/
-const sections = Array.from(document.querySelectorAll("section"));
-const menu = document.getElementById("navbar__list"); 
-
-// Go to top btn 
-
+ * Mohamed Ali — Portfolio
+ * Global elements
+ */
+const sections = Array.from(document.querySelectorAll("main section[id]"));
+const menu = document.getElementById("navbar__list");
 const toTop = document.getElementById("to-top");
-
-// Hide header for scroll
-
 const header = document.querySelector(".page__header");
-
-// On Click, Scroll to the page's top, replace 'smooth' with 'instant' if you don't want smooth scrolling
-
-toTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-// On scroll, Show/Hide the btn with animation
-
-//window.onscroll = () =>  window.scrollY > 500 ? toTop.style.opacity = 1 : toTop.style.opacity = 0;
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.querySelector(".navbar__menu");
 
 /**
- * End Global Variables
-*/
-
-// Create List Item for menu navbar 
-function createListItem() {
-    for (section of sections) {
-        sectionName = section.getAttribute('data-nav');
-        sectionLink = section.getAttribute('id');
-        // Create item for ech one
-        listItem = document.createElement('li');
-        // Add the txt item
-        listItem.innerHTML = `<a class='menu__link' href='#${sectionLink}'>${sectionName}</a>`;
-        //Add List Item In The Menu
-        menu.appendChild(listItem);
-		
-		
-    }
+ * Build the nav from each section's data-nav attribute
+ */
+function buildNav() {
+  sections.forEach((section) => {
+    const name = section.getAttribute("data-nav");
+    const id = section.getAttribute("id");
+    const li = document.createElement("li");
+    li.innerHTML = `<a class="menu__link" href="#${id}">${name}</a>`;
+    menu.appendChild(li);
+  });
 }
-// build the nav
-createListItem();
-// End Create List Item for menu navbar 
+buildNav();
 
-// Add class 'active' to section when near top of viewport
-//window.onscroll  = function() {
-//    document.querySelectorAll('section').forEach(function (active) {
-//        
-//        if (
-//            active.getBoundingClientRect().top >= 0 &&
-//            active.getBoundingClientRect().top <= 410
-//        ) {
-//            active.classList.add('your-active-class');
-//        } else {
-//            active.classList.remove('your-active-class');
-//        }
-//    });
-//};
-// End Add class 'active' to section when near top of viewport
+/**
+ * Highlight the nav link for the section currently in view
+ */
+function setActiveLink() {
+  let current = sections[0];
+  sections.forEach((section) => {
+    const top = section.getBoundingClientRect().top;
+    if (top <= 140) current = section;
+  });
+  document.querySelectorAll(".menu__link").forEach((link) => {
+    link.classList.toggle("active-link", link.getAttribute("href") === `#${current.id}`);
+  });
+}
 
-// Set sections as active
-window.addEventListener("scroll", listLinkActive);
-function listLinkActive(){
-  sections.forEach(section =>{
-  const sectionTop = section.getBoundingClientRect().top;
- const link = document.querySelector(`a[href="#${section.id}"]`);
-  if(sectionTop >= 0 && sectionTop <= 410){
-    link.classList.add("active-link");
-	section.classList.add('your-active-class');
- }else{
-    link.classList.remove("active-link");
-	section.classList.remove('your-active-class');
- }
+/**
+ * Hide header on scroll down, reveal on scroll up. Toggle back-to-top button.
+ */
+let lastScroll = 0;
+function handleScroll() {
+  const y = window.scrollY;
+
+  if (y > lastScroll && y > 400) {
+    header.classList.add("is-hidden");
+  } else {
+    header.classList.remove("is-hidden");
+  }
+  lastScroll = y;
+
+  toTop.classList.toggle("is-visible", y > 600);
+
+  setActiveLink();
+}
+window.addEventListener("scroll", handleScroll, { passive: true });
+handleScroll();
+
+toTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+/**
+ * Mobile nav toggle
+ */
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("is-open");
+  });
+  document.querySelectorAll(".menu__link").forEach((link) => {
+    link.addEventListener("click", () => navMenu.classList.remove("is-open"));
+  });
 }
-// End sections as active
-
-// Hide header for scroll (display : none)
-
-window.addEventListener('scroll', () =>{
-	const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-	const scrolled = window.scrollY ;
-	if ((scrolled) >= 2000 && scrollable) {
-		header.style.display = "none";
-		
-	}
-	else {
-		header.style.display = "block";
-		header.style.behavior = "smooth";
-	}
-})
-
-
-//let isScrolling;
-//document.onscroll = () => {
-//  header.style.display = "block"
-//  clearTimeout(isScrolling)
-//   isScrolling = setTimeout(() => {
-//    header.style.display = "none";
-//  }, 4000);
-//
-//  window.scrollY > 800
-//    ? (toTop.style.display = "block")
-//    : (toTop.style.display = "none");
-//};
-// End hide header
-
