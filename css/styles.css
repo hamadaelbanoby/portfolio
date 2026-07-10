@@ -668,7 +668,7 @@ section:first-of-type { border-top: none; }
   .navbar__menu.is-open ul { flex-direction: column; width: 100%; }
   .skills__groups { grid-template-columns: 1fr; }
   .portfolio__grid { grid-template-columns: 1fr; }
-  .hero { padding-top: 7rem; }
+  .hero { padding-top: 3rem; }
   .lang-row { flex-direction: column; gap: 1rem; }
 }
 
